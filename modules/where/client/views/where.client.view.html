@@ -1,0 +1,87 @@
+<section>
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <h1 id="blue"> Where do You want to travel</h1>
+            <p id="bold">If you don't know this(yet) you can skip this question and get suggestions</p>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+
+    <div id="placeholder" class="row">
+        <div  class="col-md-10 col-md-offset-1 col-sm-12  col-xs-12 col">
+            <header ng-include="'/modules/core/client/views/menu.client.view.html'"></header>
+        </div>
+    </div>
+
+    <div id="bg" class="row" >
+        <div  class="col-md-8 col-md-offset-2 ">
+            <h4 id="padding" class="title">Weet je al waar je heen wilt?</h4>
+            <div class="btn-field">
+                <button class="btn btn-success ">Nee, geef me suggesties</button>
+                <button class="btn btn-success ">Je en ik wil ook suggesties</button>
+                <button class="btn btn-success ">Ja, dat wek ik al precies</button>
+            </div>
+            <p class="light blue"><i class="fa fa-lightbulb-o fa-lg" aria-hidden="true"></i>
+                Je ontvangt suggesties op basis van de voorkeuren die je hebt aangegen</p>
+        </div>
+    </div>
+
+
+    <div id="bg" class="row">
+        <div  class="col-md-6 col-md-offset-2">
+            <h4 >Distination(s) you consider to go to</h4>
+        </div>
+    </div>
+    <div id="bg" class="row padding-bottom">
+        <div  class="col-md-8 col-md-offset-2">
+            <input type="text" ng-model="inputModel" class="field-input"
+                   placeholder="Type city, coutry or continent"
+                   uib-tooltip="Enter what you want to visit"
+                   tooltip-placement="top"
+                   tooltip-trigger="'mouseenter'"
+                   tooltip-enable="!inputModel" />
+            <div class="button-destination"><button type="submit" class="btn btn-success">
+                <i class="fa fa-plus-circle fa-2x" aria-hidden="true"></i> Add a destination</button></div>
+        </div>
+    </div>
+
+    <div id="bg" class="row">
+        <div  class="col-md-6 col-md-offset-2">
+            <h4 >Are there any distinations you don'twant to visit</h4>
+            <p id="bold">For example because you've already been there recently</p>
+        </div>
+    </div>
+
+    <div id="bg" class="row padding-bottom">
+        <div  class="col-md-8 col-md-offset-2">
+            <input type="text" ng-model="inputModel" class="field-input"
+                   placeholder="Type city, coutry or continent"
+                   uib-tooltip="Enter what you don't want to visit"
+                   tooltip-placement="top"
+                   tooltip-trigger="'mouseenter'"
+                   tooltip-enable="!inputModel" />
+            <div class="button-destination"><button type="submit" class="btn btn-success">
+                <i class="fa fa-plus-circle fa-2x" aria-hidden="true"></i> Add a destination</button></div>
+        </div>
+    </div>
+
+    <div class="footer-menu">
+        <div  class="row">
+            <div class="col-md-2 col-xs-3"><a ui-sref="preferrences" class="btn btn-success btn-lg pull-right ">
+                <i class="fa fa-arrow-circle-left fa-lg" aria-hidden="true"></i> Previous</a>
+            </div>
+            <div class="col-md-8 col-xs-6">
+                <p class="light blue"><i class="fa fa-lightbulb-o fa-lg" aria-hidden="true"></i>
+                    Some trigger text to motivate to continue</p>
+            </div>
+            <div class="col-md-2 col-xs-3">
+                <a ui-sref="when" class="btn btn-success btn-lg pull-right ">Next
+                    <i class="fa fa-arrow-circle-right fa-lg" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </div>
+
+
+
+</section>

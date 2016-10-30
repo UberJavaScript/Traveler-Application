@@ -30,6 +30,7 @@
       .state('home', {
         url: '/',
         templateUrl: '/modules/core/client/views/home.client.view.html',
+          data : { pageTitle: 'Home' },
         controller: 'HomeController',
         controllerAs: 'vm'
       })
