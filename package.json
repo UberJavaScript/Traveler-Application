@@ -10,8 +10,8 @@
 
   },
   "engines": {
-    "node": ">=4.6.0",
-    "npm": ">=3.10.8"
+    "node": "latest",
+    "npm": "latest"
   },
   "scripts": {
     "update": "npm update && npm prune && bower install --allow-root && bower prune --allow-root",
