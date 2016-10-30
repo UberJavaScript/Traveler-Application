@@ -18,6 +18,8 @@ module.exports = {
         // bower:js
         'public/lib/angular/angular.js',
         'public/lib/angular-animate/angular-animate.js',
+          'public/lib/angular-sanitize/angular-sanitize.min.js',
+          'public/lib/angular-touch/angular-touch.min.js',
         'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
         'public/lib/ng-file-upload/ng-file-upload.js',
         'public/lib/ng-img-crop/compile/unminified/ng-img-crop.js',
@@ -27,6 +29,8 @@ module.exports = {
         'public/lib/angular-ui-notification/dist/angular-ui-notification.js',
         'public/lib/angular-ui-router/release/angular-ui-router.js',
         'public/lib/owasp-password-strength-test/owasp-password-strength-test.js',
+          'public/lib/jquery/dist/jquery.min.js',
+          'public/lib/own/own-jqyery.js'
         // endbower
       ],
       tests: ['public/lib/angular-mocks/angular-mocks.js']

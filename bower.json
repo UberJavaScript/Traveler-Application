@@ -4,9 +4,11 @@
   "homepage": "Home",
   "license": "MIT",
   "dependencies": {
-    "angular": "~1.5.0",
-    "angular-animate": "~1.5.0",
-    "angular-bootstrap": "~1.2.1",
+    "angular": "~1.5.8",
+    "angular-animate": "~1.5.8",
+    "angular-touch ": "~1.5.8",
+    "angular-sanitize ": "~1.5.8",
+    "angular-bootstrap": "~2.2.0",
     "angular-messages": "~1.5.0",
     "angular-mocks": "~1.5.0",
     "angular-resource": "~1.5.0",
@@ -16,7 +18,8 @@
     "ng-file-upload": "^12.1.0",
     "ng-img-crop": "ngImgCrop#^0.3.2",
     "owasp-password-strength-test": "~1.3.0",
-  "components-font-awesome": "^4.7.0"
+    "components-font-awesome": "^4.7.0",
+    "jquery" : "latest"
   },
   "overrides": {
     "bootstrap": {
