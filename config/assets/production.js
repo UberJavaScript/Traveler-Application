@@ -30,7 +30,7 @@ module.exports = {
             'public/lib/angular-ui-router/release/angular-ui-router.js',
             'public/lib/owasp-password-strength-test/owasp-password-strength-test.js',
             'public/lib/jquery/dist/jquery.min.js',
-            'public/lib/own/own-jqyery.js'
+            'public/own/own-jqyery.js'
             // endbower
         ]
         // endbower
