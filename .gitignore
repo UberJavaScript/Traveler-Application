@@ -80,3 +80,4 @@ mongod
 *.njsproj
 *.sln
 node_modules
+npm-debug.log
