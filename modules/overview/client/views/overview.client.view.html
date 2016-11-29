@@ -1,4 +1,6 @@
-<section>
+<section class="{{$state.current.name}}">
+
+    <!-- New Row -->
     <div class="row">
         <div  class="col-md-8 col-md-offset-2 ">
             <h1 id="blue">What do you like?</h1>
@@ -6,13 +8,15 @@
         </div>
     </div>
 
+    <!-- New Row -->
     <div id="placeholder" class="row">
         <div  class="col-md-10 col-md-offset-1 ">
             <header ng-include="'/modules/core/client/views/menu.client.view.html'"></header>
         </div>
     </div>
 
-    <div id="bg" class="row">
+    <!-- New Row -->
+    <div class="row well">
         <div  class="col-md-8 col-md-offset-2 ">
             <h1 id="blue">What do you like?</h1>
             <p id="bold">Choose what suits you best during your holiday</p>
@@ -20,18 +24,25 @@
     </div>
 
     <div class="footer-menu">
+
+       <!-- New Row -->
         <div  class="row">
-            <div class="col-md-2 col-xs-3"><a ui-sref="budget" class="btn btn-success btn-lg pull-right ">
+
+            <div class="col-md-2 col-sm-3 col-sm-offset-0 col-xs-offset-2 col-xs-4 ">
+            <a ui-sref="budget" class="btn btn-success btn-lg pull-right ">
                 <i class="fa fa-arrow-circle-left fa-lg" aria-hidden="true"></i> Previous</a>
             </div>
-            <div class="col-md-8 col-xs-6">
+
+            <div class="col-md-8 hidden-xs col-sm-6">
                 <p class="light blue"><i class="fa fa-lightbulb-o fa-lg" aria-hidden="true"></i>
                     Some trigger text to motivate to continue</p>
             </div>
-            <div class="col-md-2 col-xs-3">
+
+            <div class="col-md-2 col-sm-3 col-sm-offset-0 col-xs-offset-1 col-xs-4">
                 <a ui-sref="#" class="btn btn-success btn-lg pull-right ">Next
                     <i class="fa fa-arrow-circle-right fa-lg" aria-hidden="true"></i></a>
             </div>
+
         </div>
     </div>
 

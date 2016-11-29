@@ -1,9 +1,11 @@
-$(document).on("click", ".holyday-item", function() {
-    $(".holiday-name", this ).toggleClass( "new" );
+$(document).ready(function(){
+    $(document).on("click", ".holyday-item", function() {
+        $(".holiday-name", this ).toggleClass( "new" );
+        $("img", this).toggleClass( "selected" );
+        $("#fa2", this).toggleClass("fa fa-check fa-stack-1x fa-inverse");
+        $("#fa1", this).toggleClass("fa fa-circle fa-stack-2x");
+    });
+    
 });
-$(document).on("click", "img", function() {
-    $( this ).toggleClass( "selected" );
-});
-$(document).on("click", ".holyday-item", function() {
-    $("i", this).toggleClass("fa fa-check fa-2x");
-});
+
+

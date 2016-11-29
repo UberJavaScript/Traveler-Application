@@ -1,4 +1,6 @@
-<section >
+<section class="{{$state.current.name}}">
+
+    <!-- New row -->
     <div  class="row">
         <div  class="col-md-8 col-md-offset-2 ">
             <h1 id="blue">Whit whom  and when do you want to travel</h1>
@@ -6,67 +8,69 @@
         </div>
     </div>
 
+    <!-- New row -->
     <div id="placeholder" class="row">
         <div  class="col-md-10 col-md-offset-1 ">
             <header ng-include="'/modules/core/client/views/menu.client.view.html'"></header>
         </div>
     </div>
 
-    <div id="bg" class="row" >
+    <!-- New row -->
+    <div class="row well" >
         <div  class="col-md-10 col-md-offset-2 ">
             <h4>Duration</h4>
             <form  class="form-inline">
                 <div class="form-group">
-                    <label class="form-control">1 week</label>
-                    <a class="form-control">+</a>
-                    <a class="form-control">-</a>
-                    <label class="form-control">3 days</label>
-                    <a class="form-control">+</a>
-                    <a class="form-control">-</a>
+                    <lable class="form-control">Days {{count}}</lable>
+                    <a ng-click="count = count + 1" ng-init="count=0" class="form-control">+</a>
+                    <a  ng-click="count = count - 1" class="form-control">-</a>
+                    <lable class="form-control"> Weeks {{countTwo}}</lable>
+                    <a ng-click="countTwo = countTwo + 1" ng-init="countTwo=0" class="form-control">+</a>
+                    <a  ng-click="countTwo = countTwo - 1" class="form-control">-</a>
                 </div>
             </form>
-            <div id="bg" class="row">
+
+            <!-- New row -->
+            <div class="row ">
                 <div class="col-md-6"><h4>Departure</h4></div>
                 <div class="col-md-6"><h4>Return</h4></div>
             </div>
+
             <div class="col-md-5 white" data-ng-controller="WhenController">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a ng-click="open1()"><i class="fa fa-calendar fa-lg" aria-hidden="true"></i>  Specific date</a></li>
-                    <li><a ng-click="open1()"><i class="fa fa-calendar-o fa-lg" aria-hidden="true"></i>  Month</a> </li>
-                    <li><a ng-click="open1()"><i class="fa fa-calendar-check-o fa-lg" aria-hidden="true"></i> Holidays</a> </li>
+                    <li class="active"><a><i class="fa fa-calendar fa-lg" aria-hidden="true"></i>  Specific date</a></li>
+                    <li><a ><i class="fa fa-calendar-o fa-lg" aria-hidden="true"></i>  Month</a> </li>
+                    <li><a ><i class="fa fa-calendar-check-o fa-lg" aria-hidden="true"></i> Holidays</a> </li>
                 </ul>
-                <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
-                <input type="text" class="form-control" uib-datepicker-popup ng-model="dt" is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
-                <label>Format: <span class="muted-text">(manual alternate <em>{{altInputFormats[0]}}</em>)</span></label> <select class="form-control" ng-model="format" ng-options="f for f in formats"><option></option></select>
-                <button type="button" class="btn btn-sm btn-info" ng-click="today()">Today</button>
-                <button type="button" class="btn btn-sm btn-default" ng-click="setDate(2009, 7, 24)">2009-08-24</button>
-                <button type="button" class="btn btn-sm btn-danger" ng-click="clear()">Clear</button>
-                <button type="button" class="btn btn-sm btn-default" ng-click="toggleMin()" uib-tooltip="After today restriction">Min date</button>
+                <p>{{dt | date:'fullDate' }}</p>
+
+                <div style="display:inline-block; min-height:290px;">
+                    <div uib-datepicker ng-model="dt" class="well well-sm" datepicker-options="options"></div>
+                </div>
+
             </div>
+
+
             <div class="col-md-1"></div>
 
             <div class="col-md-5 white" data-ng-controller="WhenController">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a ng-click="open1()"><i class="fa fa-calendar fa-lg" aria-hidden="true"></i>  Specific date</a></li>
-                    <li><a ng-click="open1()"><i class="fa fa-calendar-o fa-lg" aria-hidden="true"></i>  Month</a> </li>
-                    <li><a ng-click="open1()"><i class="fa fa-calendar-check-o fa-lg" aria-hidden="true"></i> Holidays</a> </li>
+                    <li class="active"><a ><i class="fa fa-calendar fa-lg" aria-hidden="true"></i>  Specific date</a></li>
+                    <li><a ><i class="fa fa-calendar-o fa-lg" aria-hidden="true"></i>  Month</a> </li>
+                    <li><a ><i class="fa fa-calendar-check-o fa-lg" aria-hidden="true"></i> Holidays</a> </li>
                 </ul>
-                <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
-                <input type="text" class="form-control" uib-datepicker-popup ng-model="dt" is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
-                <label>Format: <span class="muted-text">(manual alternate <em>{{altInputFormats[0]}}</em>)</span></label> <select class="form-control" ng-model="format" ng-options="f for f in formats"><option></option></select>
-                <button type="button" class="btn btn-sm btn-info" ng-click="today()">Today</button>
-                <button type="button" class="btn btn-sm btn-default" ng-click="setDate(2009, 7, 24)">2009-08-24</button>
-                <button type="button" class="btn btn-sm btn-danger" ng-click="clear()">Clear</button>
-                <button type="button" class="btn btn-sm btn-default" ng-click="toggleMin()" uib-tooltip="After today restriction">Min date</button>
+                <p>{{dt | date:'fullDate' }}</p>
+                <div style="display:inline-block; min-height:290px;">
+                    <div uib-datepicker ng-model="dt" class="well well-sm" datepicker-options="options"></div>
+                </div>
+
+
             </div>
         </div>
-    </div>
-    <div>
 
-
-        <div id="bg" class="row">
-            <div class="col-md-1"></div>
-            <div class="col-md-10">
+        <!-- New row -->
+        <div class="row">
+            <div class="col-md-offset-1 col-md-10">
                 <p  class="light"><i class="fa fa-lightbulb-o fa-lg" aria-hidden="true"></i>
                     You can choose a longer period that the perferred duration of your holiday</p>
                 <p class="light blue"><i class="fa fa-lightbulb-o fa-lg" aria-hidden="true"></i>
@@ -74,20 +78,30 @@
                 </p>
             </div>
             <div class="col-md-1"></div>
-
         </div>
+    </div>
+   
+    <div>
 
+       
 
+        <!-- Footer -->
         <div class="footer-menu">
+
+            <!-- New row -->
             <div  class="row">
-                <div class="col-md-2 col-xs-3"><a ui-sref="where" class="btn btn-success btn-lg pull-right ">
+
+                <div class="col-md-2 col-sm-3 col-sm-offset-0 col-xs-offset-2 col-xs-4 ">
+                    <a ui-sref="where" class="btn btn-success btn-lg pull-right ">
                     <i class="fa fa-arrow-circle-left fa-lg" aria-hidden="true"></i> Previous</a>
                 </div>
-                <div class="col-md-8 col-xs-6">
+
+                <div class="col-md-8 hidden-xs col-sm-6">
                     <p class="light blue"><i class="fa fa-lightbulb-o fa-lg" aria-hidden="true"></i>
                         Some trigger text to motivate to continue</p>
                 </div>
-                <div class="col-md-2 col-xs-3">
+
+                <div class="col-md-2 col-sm-3 col-sm-offset-0 col-xs-offset-1 col-xs-4">
                     <a ui-sref='budget' class="btn btn-success btn-lg pull-right ">Next
                         <i class="fa fa-arrow-circle-right fa-lg" aria-hidden="true"></i></a>
                 </div>
@@ -96,3 +110,4 @@
     </div>
 
 </section>
+

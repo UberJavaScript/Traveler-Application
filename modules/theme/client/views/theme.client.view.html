@@ -1,4 +1,6 @@
-<section >
+<section class="{{$state.current.name}}">
+    
+
     <div class="row">
         <div  class="col-md-8 col-md-offset-2 ">
             <h1 id="blue"> Theme</h1>
@@ -6,44 +8,73 @@
         </div>
     </div>
 
+    <!-- New Row -->
     <div id="placeholder" class="row">
-        <div  class="col-md-10 col-md-offset-1 ">
+        <div  class="col-md-10 col-md-offset-1  ">
             <header ng-include="'/modules/core/client/views/menu.client.view.html'"></header>
         </div>
     </div>
-    <div id="bg" class="row" >
-        <div id="padding" class="col-md-8 col-md-offset-2 col-sm-offset-1 col-xs-offset-1 col-sm-11 col-xs-11">
-            <uib-progressbar max="max" value="dynamic"><span style="color:white; white-space:nowrap;">{{dynamic}} / {{max}}</span></uib-progressbar>
-            <div ng-click="progress()" class="holyday-item"><div  class="img"><img  class="img-thumbnail" src="http://placehold.it/150x150"><span class="holiday-icon"><i class=""></i></span><span class="holiday-name"> Beach</span></div></div>
-            <div ng-click="progress()" class="holyday-item"><div class="img"><img  class="img-thumbnail" src="http://placehold.it/150x150"><span class="holiday-icon"><i class=""></i></span><span class="holiday-name">Citytrip</span></div></div>
-            <div ng-click="progress()" class="holyday-item"><div class="img"><img  class="img-thumbnail" src="http://placehold.it/150x150"><span class="holiday-icon"><i class=""></i></span><span class="holiday-name">Cruise</span></div></div>
-            <div ng-click="progress()" class="holyday-item"><div class="img"><img  class="img-thumbnail" src="http://placehold.it/150x150"><span class="holiday-icon"><i class=""></i></span><span class="holiday-name">Cycling</span></div></div>
-            <div ng-click="progress()" class="holyday-item"><div class="img"><img  class="img-thumbnail" src="http://placehold.it/150x150"><span class="holiday-icon"><i class=""></i></span><span class="holiday-name">Diving</span></div></div>
-            <div ng-click="progress()" class="holyday-item"><div class="img"><img  class="img-thumbnail" src="http://placehold.it/150x150"><span class="holiday-icon"><i class=""></i></span><span class="holiday-name">Food & Drinking</span></div></div>
-            <div ng-click="progress()" class="holyday-item"><div class="img"><img  class="img-thumbnail" src="http://placehold.it/150x150"><span class="holiday-icon"><i class=""></i></span><span class="holiday-name">Motobiking</span></div></div>
-            <div ng-click="progress()" class="holyday-item"><div class="img"><img  class="img-thumbnail" src="http://placehold.it/150x150"><span class="holiday-icon"><i class=""></i></span><span class="holiday-name">Surfing</span></div></div>
-            <div ng-click="progress()" class="holyday-item"><div class="img"><img  class="img-thumbnail" src="http://placehold.it/150x150"><span class="holiday-icon"><i class=""></i></span><span class="holiday-name">Walking</span></div></div>
-            <div ng-click="progress()" class="holyday-item"><div class="img"><img  class="img-thumbnail" src="http://placehold.it/150x150"><span class="holiday-icon"><i class=""></i></span><span class="holiday-name">Surfing</span></div></div>
-            <div ng-click="progress()" class="holyday-item"><div class="img"><img  class="img-thumbnail" src="http://placehold.it/150x150"><span class="holiday-icon"><i class=""></i></span><span class="holiday-name">Wedding</span></div></div>
-            <div ng-click="progress()" class="holyday-item"><div class="img"><img  class="img-thumbnail" src="http://placehold.it/150x150"><span class="holiday-icon"><i class=""></i></span><span class="holiday-name">Winter</span></div></div>
-            <div ng-click="progress()" class="holyday-item"><div class="img"><img  class="img-thumbnail" src="http://placehold.it/150x150"><span class="holiday-icon"><i class=""></i></span><span class="holiday-name">Sailing</span></div></div>
-            <div ng-click="progress()" class="holyday-item"><div class="img"><img  class="img-thumbnail" src="http://placehold.it/150x150"><span class="holiday-icon"><i class=""></i></span><span class="holiday-name">Placeholder</span></div></div>
-            <div ng-click="progress()" class="holyday-item"><div class="img"><img  class="img-thumbnail" src="http://placehold.it/150x150"><span class="holiday-icon"><i class=""></i></span><span class="holiday-name">Placeholder</span></div></div>
-            <div ng-click="progress()" class="holyday-item"><div class="img"><img  class="img-thumbnail" src="http://placehold.it/150x150"><span class="holiday-icon"><i class=""></i></span><span class="holiday-name">Placeholder</span></div></div>
 
-        </div>
+    <!-- New Row -->
+    <div class="row well" >
+        <div id="padding" class="col-md-8 col-md-offset-2 col-xs-11 col-xs-offset-1 ">
+
+            <uib-progressbar max="max" value="dynamic"><span style="color:white; white-space:nowrap;">{{dynamic}} / {{max}}</span></uib-progressbar>
+
+
+            <div ng-click="progress()" ng-class='selected' class="holyday-item"><img  class="img-thumbnail" src="http://placehold.it/150x150"><span class="holiday-name"><span class="fa-stack fa-lg "><i id="fa1" ></i><i id="fa2" ></i></span><p>Beach</p></span></div>
+
+
+            <div ng-click="progress()" ng-class='selected' class="holyday-item"><img  class="img-thumbnail" src="http://placehold.it/150x150"><span class="holiday-name"><span class="fa-stack fa-lg "><i id="fa1" class=""></i><i id="fa2" ng-class="fa2"></i></span><p>Citytrip</p></span></div>
+
+            <div ng-click="progress()" class="holyday-item"><img  class="img-thumbnail" src="http://placehold.it/150x150"><span class="holiday-name"><span class="fa-stack fa-lg "><i id="fa1" class=""></i><i id="fa2" class=""></i></span><p>Cruise</p></span></div>
+
+            <div ng-click="progress()" class="holyday-item"><img  class="img-thumbnail" src="http://placehold.it/150x150"><span class="holiday-name"><span class="fa-stack fa-lg "><i id="fa1" class=" "></i><i id="fa2" class=""></i></span><p>Cycling</p></span></div>
+
+            <div ng-click="progress()" class="holyday-item"><img  class="img-thumbnail" src="http://placehold.it/150x150"><span class="holiday-name"><span class="fa-stack fa-lg "><i id="fa1" class=" "></i><i id="fa2" class=""></i></span><p>Diving</p></span></div>
+
+            <div ng-click="progress()" class="holyday-item"><img  class="img-thumbnail" src="http://placehold.it/150x150"><span class="holiday-name"><span class="fa-stack fa-lg "><i id="fa1" class=" "></i><i id="fa2" class=""></i></span><p>Food & Drinking</p></span></div>
+
+            <div ng-click="progress()" class="holyday-item"><img  class="img-thumbnail" src="http://placehold.it/150x150"><span class="holiday-name"><span class="fa-stack fa-lg "><i id="fa1" class=" "></i><i id="fa2" class=""></i></span><p>Motobiking</p></span></div>
+
+            <div ng-click="progress()" class="holyday-item"><img  class="img-thumbnail" src="http://placehold.it/150x150"><span class="holiday-name"><span class="fa-stack fa-lg "><i id="fa1" class=" "></i><i id="fa2" class=""></i></span><p>Walking</p></span></div>
+
+            <div ng-click="progress()" class="holyday-item"><img  class="img-thumbnail" src="http://placehold.it/150x150"><span class="holiday-name"><span class="fa-stack fa-lg "><i id="fa1" class=" "></i><i id="fa2" class=""></i></span><p>Surfing</p></span></div>
+
+            <div ng-click="progress()" class="holyday-item"><img  class="img-thumbnail" src="http://placehold.it/150x150"><span class="holiday-name"><span class="fa-stack fa-lg "><i id="fa1" class=" "></i><i id="fa2" class=""></i></span><p>Wedding</p></span></div>
+
+            <div ng-click="progress()" class="holyday-item"><img  class="img-thumbnail" src="http://placehold.it/150x150"><span class="holiday-name"><span class="fa-stack fa-lg "><i id="fa1" class=" "></i><i id="fa2" class=""></i></span><p>Winter</p></span></div>
+
+            <div ng-click="progress()" class="holyday-item"><img  class="img-thumbnail" src="http://placehold.it/150x150"><span class="holiday-name"><span class="fa-stack fa-lg "><i id="fa1" class=" "></i><i id="fa2" class=""></i></span><p>Sailing</p></span></div>
+
+            <div ng-click="progress()" class="holyday-item"><img  class="img-thumbnail" src="http://placehold.it/150x150"><span class="holiday-name"><span class="fa-stack fa-lg "><i id="fa1" class=" "></i><i id="fa2" class=""></i></span><p>Placeholder</p></span></div>
+
+            <div ng-click="progress()" class="holyday-item"><img  class="img-thumbnail" src="http://placehold.it/150x150"><span class="holiday-name"><span class="fa-stack fa-lg "><i id="fa1" class=" "></i><i id="fa2" class=""></i></span><p>Placeholder</p></span></div>
+
+            <div ng-click="progress()" class="holyday-item"><img  class="img-thumbnail" src="http://placehold.it/150x150"><span class="holiday-name"><span class="fa-stack fa-lg "><i id="fa1" class=" "></i><i id="fa2" class=""></i></span><p>Placeholder</p></span></div>
+
+            <div ng-click="progress()" class="holyday-item"><img  class="img-thumbnail" src="http://placehold.it/150x150"><span class="holiday-name"><span class="fa-stack fa-lg "><i id="fa1" class=" "></i><i id="fa2" class=""></i></span><p>Placeholder</p></span></div>
+           </div>
     </div>
 
+
+    <!-- Footer -->
     <div class="footer-menu">
+
+         <!-- New Row -->
         <div  class="row">
-            <div class="col-md-2 col-xs-3"><a href="/" class="btn btn-success btn-lg pull-right ">
+
+            <div class="col-md-2 col-sm-3 col-sm-offset-0 col-xs-offset-2 col-xs-4 ">
+            <a href="/" class="btn btn-success btn-lg pull-right ">
                 <i class="fa fa-arrow-circle-left fa-lg" aria-hidden="true"></i> Back to Home</a>
             </div>
-            <div class="col-md-8 col-xs-6">
+
+            <div class="col-md-8 hidden-xs col-sm-6">
                 <p class="light blue"><i class="fa fa-lightbulb-o fa-lg" aria-hidden="true"></i>
                     Notification about that it can always be changed, agent will check possibilities</p>
             </div>
-            <div class="col-md-2 col-xs-3">
+
+            <div class="col-md-2 col-sm-3 col-sm-offset-0 col-xs-offset-1 col-xs-4">
                 <a ui-sref="preferrences" class="btn btn-success btn-lg pull-right ">Next
                     <i class="fa fa-arrow-circle-right fa-lg" aria-hidden="true"></i></a>
             </div>

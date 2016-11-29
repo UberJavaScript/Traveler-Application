@@ -70,7 +70,6 @@ module.exports.initMiddleware = function (app) {
   if (_.has(config, 'log.format')) {
     app.use(morgan(logger.getLogFormat(), logger.getMorganOptions()));
   }
-
   // Environment dependent middleware
   if (process.env.NODE_ENV === 'development') {
     // Disable views cache

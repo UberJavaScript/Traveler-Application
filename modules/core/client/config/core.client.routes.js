@@ -3,6 +3,9 @@
 
   angular
     .module('core.routes')
+      .run(function($rootScope, $state) {
+          $rootScope.$state = $state;
+      })
     .config(routeConfig);
 
   routeConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
@@ -30,7 +33,7 @@
       .state('home', {
         url: '/',
         templateUrl: '/modules/core/client/views/home.client.view.html',
-          data : { pageTitle: 'Home' },
+          data : {pageTitle: 'Home'},
         controller: 'HomeController',
         controllerAs: 'vm'
       })
